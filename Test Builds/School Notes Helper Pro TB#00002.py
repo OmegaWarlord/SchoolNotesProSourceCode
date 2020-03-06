@@ -37,11 +37,11 @@ def datetime_range(start, end, delta):
 		current += delta
 
 dts = [dt.strftime('%I:%M-%p') for dt in
-	   datetime_range(datetime(2016, 1, 1), datetime(2016, 1, 2),
+	   datetime_range(datetime.datetime(2016, 1, 1), datetime.datetime(2016, 1, 2),
 	   timedelta(minutes=1))]
 
 dtsd = [dt.strftime('%D') for dt in
-   datetime_range(datetime(2020,1,1), datetime(2030, 1, 1),
+   datetime_range(datetime.datetime(2020,1,1), datetime.datetime(2030, 1, 1),
    timedelta(days=1))]
 
 def globalize(): global version, title
@@ -698,7 +698,7 @@ def SortHomework():
 				elif w[1].upper() == "PM":
 					if int(Time[0]) < 12:
 						Time[0] = str(int(Time[0])+12)
-				duedate = datetime( int(Date[2]) +2000,
+				duedate = datetime.datetime( int(Date[2]) +2000,
 									int(Date[0]),
 									int(Date[1]),
 									int(Time[0]),
@@ -805,7 +805,7 @@ def ReadHomework():
 			elif w[1].upper() == "PM":
 				if int(Time[0]) < 12:
 					Time[0] = str(int(Time[0])+12)
-			duedate = datetime( int(Date[2]) +2000,
+			duedate = datetime.datetime( int(Date[2]) +2000,
 								int(Date[0]),
 								int(Date[1]),
 								int(Time[0]),
@@ -1078,10 +1078,10 @@ def clock():
 		weekday1.set(weekdaytime)
 		weekday = weekdaytime
 	dts12 = [dt.strftime('%I:%M%p').lower().replace('m', '') for dt in
-	   datetime_range(datetime(2016, 1, 1), datetime(2016, 1, 2),
+	   datetime_range(datetime.datetime(2016, 1, 1), datetime.datetime(2016, 1, 2),
 	   timedelta(minutes=1))]
 	dts24 = [dt.strftime('%H:%M') for dt in
-	   datetime_range(datetime(2016, 1, 1), datetime(2016, 1, 2),
+	   datetime_range(datetime.datetime(2016, 1, 1), datetime.datetime(2016, 1, 2),
 	   timedelta(minutes=1))]
 
 	def Schedule(Name, Start, End):
@@ -1145,7 +1145,7 @@ def clock():
 		elif w[1].upper() == "PM":
 			if int(Time[0]) < 12:
 				Time[0] = str(int(Time[0])+12)
-		duedate = datetime( int(Date[2]) +2000,
+		duedate = datetime.datetime( int(Date[2]) +2000,
 							int(Date[0]),
 							int(Date[1]),
 							int(Time[0]),
