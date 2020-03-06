@@ -979,8 +979,7 @@ lab.pack(side="left", anchor='nw', padx='5', pady='10')
 ab = tk.Label(root, textvariable=displayTimes, anchor='e', justify="center", background="#FFFFFF", fg="black", font=("Arial", 10))
 ab.pack(side="right", anchor='ne', padx='5', pady='10')
 
-from os.path import exists as exist
-if exist(configFile): ConfigRead()
+if os.path.exists(configFile): ConfigRead()
 
 def bgcolor1():
 	global bgcolor
