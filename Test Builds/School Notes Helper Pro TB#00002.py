@@ -1,10 +1,10 @@
 import tkinter as tk
-from datetime import *
+import datetime
 import easygui as e #Datetime for updating label, easygui for simple boxes
 import os
 currenttime = None
 CurClass = None
-weekday = now().strftime("%A")
+weekday = datetime.now().strftime("%A")
 winopacity = []
 homeworklist = []
 homeworkdue = []
