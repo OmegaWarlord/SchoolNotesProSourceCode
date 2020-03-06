@@ -683,7 +683,7 @@ alwaysontop = False
 def SortHomework():
 	global homeworklist, hwFile
 	if os.path.exists(hwFile):
-		if not len(homeworklist) == 0:
+		if len(homeworklist) != 0:
 			now = datetime.now()
 			homeworkdue = []
 			for j in homeworklist:
@@ -717,7 +717,7 @@ def AddHomework():
 	global homeworklist, homeworkdue, dtsd
 	def thing():
 		global datedue, hwitem
-		hwthing = e.multenterbox("Please enter the Name, Class, and Due Date of your assignment:", title, ['Name:', 'Class:', 'MM/DD/YY', 'HH:MM', 'AM/PM']) # todo Add calendar date picker
+		hwthing = e.multenterbox("Please enter the Name, Class, and Due Date of your assignment:", title, ['Name:', 'Class:', 'MM/DD/YY', 'HH:MM', 'AM/PM'])
 		hwitem = hwthing[:2]
 		datedue = hwthing[2:]
 	thing()
